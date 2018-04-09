@@ -9,6 +9,7 @@ function initMenu(){
 	    		 location.href='/login.html';
 	    		 return;
 	    	 }
+	    	 console.log(data);
 	    	 var menu = $("#menu");
 	    	 $.each(data, function(i,item){
 	             var a = $("<a href='javascript:;'></a>");

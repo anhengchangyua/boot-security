@@ -41,7 +41,6 @@ public class GenerateController {
 		detail.setBeanName(generateService.upperFirstChar(tableName));
 		List<BeanField> fields = generateService.listBeanField(tableName);
 		detail.setFields(fields);
-
 		return detail;
 	}
 

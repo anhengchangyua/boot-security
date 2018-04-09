@@ -90,7 +90,6 @@ public class GenerateServiceImpl implements GenerateService {
 		String name = StrUtil.str2hump(string);
 		String firstChar = name.substring(0, 1);
 		name = name.replaceFirst(firstChar, firstChar.toUpperCase());
-
 		return name;
 	}
 

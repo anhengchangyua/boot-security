@@ -24,7 +24,7 @@ public class LoginUser extends SysUser implements UserDetails {
 	/** 过期时间戳 */
 	private Long expireTime;
 
-	public List<Permission> getPermissions() {
+	public List<Permission>  getPermissions() {
 		return permissions;
 	}
 
