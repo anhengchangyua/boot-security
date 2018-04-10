@@ -1,4 +1,4 @@
-/** layui-v2.2.6 MIT License By https://www.layui.com */
+/** layui-v2.2.5 MIT License By https://www.layui.com */
 .layui-inline, img {
     display: inline-block;
     vertical-align: middle
@@ -174,8 +174,8 @@ a cite {
 
 @font-face {
     font-family: layui-icon;
-    src: url(../font/iconfont.eot?v=226_rc2);
-    src: url(../font/iconfont.eot?v=226_rc2#iefix) format('embedded-opentype'), url(../font/iconfont.svg?v=226_rc2#iconfont) format('svg'), url(../font/iconfont.woff?v=226_rc2) format('woff'), url(../font/iconfont.ttf?v=226_rc2) format('truetype')
+    src: url(../font/iconfont.eot?v=220);
+    src: url(../font/iconfont.eot?v=220#iefix) format('embedded-opentype'), url(../font/iconfont.svg?v=220#iconfont) format('svg'), url(../font/iconfont.woff?v=220) format('woff'), url(../font/iconfont.ttf?v=220) format('truetype')
 }
 
 .layui-icon {
@@ -214,11 +214,11 @@ a cite {
     content: "\e628"
 }
 
-.layui-icon-close:before {
+.layui-icon-yuejuancuohao:before {
     content: "\1006"
 }
 
-.layui-icon-close-fill:before {
+.layui-icon-cuo:before {
     content: "\1007"
 }
 
@@ -250,7 +250,7 @@ a cite {
     content: "\e62c"
 }
 
-.layui-icon-ok-circle:before {
+.layui-icon-right:before {
     content: "\1005"
 }
 
@@ -266,11 +266,11 @@ a cite {
     content: "\e62d"
 }
 
-.layui-icon-right:before {
+.layui-icon-youyou:before {
     content: "\e602"
 }
 
-.layui-icon-left:before {
+.layui-icon-zuozuo:before {
     content: "\e603"
 }
 
@@ -302,7 +302,7 @@ a cite {
     content: "\e61f"
 }
 
-.layui-icon-download-circle:before {
+.layui-icon-xiazai:before {
     content: "\e601"
 }
 
@@ -326,7 +326,7 @@ a cite {
     content: "\e645"
 }
 
-.layui-icon-down:before {
+.layui-icon-xiangxia:before {
     content: "\e61a"
 }
 
@@ -374,10 +374,6 @@ a cite {
     content: "\e636"
 }
 
-.layui-icon-username:before {
-    content: "\e66f"
-}
-
 .layui-icon-find-fill:before {
     content: "\e670"
 }
@@ -390,7 +386,7 @@ a cite {
     content: "\e715"
 }
 
-.layui-icon-up:before {
+.layui-icon-xiangshang:before {
     content: "\e619"
 }
 
@@ -420,10 +416,6 @@ a cite {
 
 .layui-icon-haoyouqingqiu:before {
     content: "\e612"
-}
-
-.layui-icon-refresh-3:before {
-    content: "\e9aa"
 }
 
 .layui-icon-weibiaoti1:before {
@@ -654,20 +646,12 @@ a cite {
     content: "\e667"
 }
 
-.layui-icon-login-weibo:before {
-    content: "\e675"
-}
-
 .layui-icon-voice:before {
     content: "\e688"
 }
 
 .layui-icon-download:before {
     content: "\e681"
-}
-
-.layui-icon-login-qq:before {
-    content: "\e676"
 }
 
 .layui-icon-snowflake:before {
@@ -694,7 +678,7 @@ a cite {
     content: "\e653"
 }
 
-.layui-icon-prev:before {
+.layui-icon-xiayiye:before {
     content: "\e65a"
 }
 
@@ -702,7 +686,7 @@ a cite {
     content: "\e7ae"
 }
 
-.layui-icon-next:before {
+.layui-icon-xiayiye1:before {
     content: "\e65b"
 }
 
@@ -712,10 +696,6 @@ a cite {
 
 .layui-icon-more:before {
     content: "\e65f"
-}
-
-.layui-icon-login-wechat:before {
-    content: "\e677"
 }
 
 .layui-icon-shrink-right:before {
@@ -746,10 +726,6 @@ a cite {
     content: "\e662"
 }
 
-.layui-icon-password:before {
-    content: "\e673"
-}
-
 .layui-icon-senior:before {
     content: "\e674"
 }
@@ -778,16 +754,7 @@ a cite {
     content: "\e66d"
 }
 
-.layui-icon-vercode:before {
-    content: "\e679"
-}
-
-.layui-icon-cellphone:before {
-    content: "\e678"
-}
-
 .layui-main {
-
     width: 1140px;
     margin: 0 auto
 }
@@ -804,7 +771,6 @@ a cite {
 
 .layui-side {
     position: fixed;
-    left: 0;
     top: 0;
     bottom: 0;
     z-index: 999;
@@ -813,7 +779,6 @@ a cite {
 }
 
 .layui-side-scroll {
-    position: relative;
     width: 220px;
     height: 100%;
     overflow-x: hidden
@@ -1526,7 +1491,6 @@ a cite {
 .layui-elem-field {
     margin-bottom: 10px;
     padding: 0;
-    padding-left: 100px;
     border-width: 1px;
     border-style: solid
 }
@@ -1614,8 +1578,7 @@ a cite {
     color: #333;
     background-color: #f2f2f2;
     cursor: pointer;
-    font-size: 14px;
-    overflow: hidden
+    font-size: 14px
 }
 
 .layui-colla-content {
@@ -1664,14 +1627,6 @@ a cite {
 .layui-card-body {
     padding: 10px 15px;
     line-height: 24px
-}
-
-.layui-card-body[pad15] {
-    padding: 15px
-}
-
-.layui-card-body[pad20] {
-    padding: 20px
 }
 
 .layui-card-body .layui-table {
@@ -3391,7 +3346,7 @@ body .layui-table-tips .layui-layer-content {
     border-top-color: rgba(255, 255, 255, .7)
 }
 
-.layui-nav .layui-nav-mored, .layui-nav-itemed > a .layui-nav-more {
+.layui-nav .layui-nav-mored, .layui-nav-itemed .layui-nav-more {
     margin-top: -9px;
     border-style: dashed dashed solid;
     border-color: transparent transparent #fff
@@ -3447,7 +3402,6 @@ body .layui-table-tips .layui-layer-content {
 }
 
 .layui-nav-tree .layui-nav-item a {
-    position: relative;
     height: 45px;
     line-height: 45px;
     text-overflow: ellipsis;
@@ -3498,23 +3452,20 @@ body .layui-table-tips .layui-layer-content {
     color: #fff
 }
 
-/*修改处*/
 .layui-nav-tree .layui-nav-more {
     top: 20px;
     right: 10px;
     margin: 0
 }
 
-
+.layui-nav-itemed .layui-nav-more {
+    top: 14px
+}
 
 .layui-nav-itemed .layui-nav-child {
     display: block;
     padding: 0;
     background-color: rgba(0, 0, 0, .3) !important
-}
-
-.layui-nav-itemed > .layui-nav-child > .layui-this > .layui-nav-child {
-    display: block
 }
 
 .layui-nav-side {
@@ -4200,11 +4151,6 @@ body .layui-util-face .layui-layer-content {
 .layui-anim-loop {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite
-}
-
-.layui-trans, .layui-trans a {
-    transition: all .3s;
-    -webkit-transition: all .3s
 }
 
 @-webkit-keyframes layui-rotate {

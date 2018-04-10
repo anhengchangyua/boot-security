@@ -9,7 +9,6 @@ function initMenu(){
 	    		 location.href='/login.html';
 	    		 return;
 	    	 }
-	    	 console.log(data);
 	    	 var menu = $("#menu");
 	    	 $.each(data, function(i,item){
 	             var a = $("<a href='javascript:;'></a>");
@@ -129,9 +128,9 @@ var active;
 layui.use(['layer', 'element'], function() {
 	var $ = layui.jquery,
 	layer = layui.layer;
-	var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+    var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
     element.on('nav(demo)', function(elem){
-      //layer.msg(elem.text());
+      // layer.msg(elem.text());
     });
 	
 	  //触发事件  

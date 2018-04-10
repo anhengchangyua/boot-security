@@ -59,13 +59,36 @@
         <h2 class="layui-colla-title">人员信息</h2>
         <div class="layui-colla-content layui-show">人员信息内容区域</div>
     </div>
+
+    <div>
+        <div class="widget-body no-padding">
+            <table id="dt-table" class="table table-striped table-bordered table-hover" style="width:100%">
+                <thead>
+                <tr>
+                </tr>
+                <tr>
+                    <th>username</th>
+                    <th>昵称</th>
+                    <th>手机号</th>
+                    <th>邮箱</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 
 <script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jq.js"></script>
 <script type="text/javascript" src="../../js/plugin/datatables/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../../js/plugin/datatables/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="../../js/my/permission.js"></script>
 <script type="text/javascript">
     layui.use(['layer', 'form', 'element'], function () {
         var layer = layui.layer
@@ -87,7 +110,77 @@
         });
 
     });
+    var example;
+    var pers = checkPermission();
 
+    function init() {
+        example =
+            $('#dt-table').DataTable({
+                "searching": false,
+                "processing": false,
+                "serverSide": true,
+                "language": {
+                    "url": "/js/plugin/datatables/Chinese.lang"
+                },
+                "ajax": {
+                    "url": "/users",
+                    "type": "get",
+                    "data": function (d) {
+                        d.username = $('#username').val();
+                        d.nickname = $('#nickname').val();
+                        d.status = $('#status').val();
+                    },
+                    "error": function (xhr, textStatus, errorThrown) {
+                        var msg = xhr.responseText;
+                        console.log(msg);
+                        var response = JSON.parse(msg);
+                        var code = response.code;
+                        var message = response.message;
+                        if (code == 400) {
+                            layer.msg(message);
+                        } else if (code == 401) {
+                            localStorage.removeItem("token");
+                            layer.msg("token过期，请先登录", {shift: -1, time: 1000}, function () {
+                                location.href = '/login.html';
+                            });
+                        } else if (code == 403) {
+                            console.log("未授权:" + message);
+                            layer.msg('未授权');
+                        } else if (code == 500) {
+                            layer.msg('系统错误：' + message);
+                        }
+                    }
+                },
+                "dom": "<'dt-toolbar'r>t<'dt-toolbar-footer'<'col-sm-10 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-10' p v>>",
+                "columns": [
+                    {"data": "username", "defaultContent": ""},
+                    {"data": "nickname", "defaultContent": ""},
+                    {"data": "phone", "defaultContent": ""},
+                    {"data": "email", "defaultContent": ""},
+                    {
+                        "data": "status",
+                        "defaultContent": "",
+                        "render": function (data, type, row) {
+                            return userStatus[data];
+                        }
+                    },
+                    {
+                        "data": "",
+                        "defaultContent": "",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var id = row['id'];
+                            var href = "updateUser.html?id=" + id;
+                            var edit = buttonEdit(href, "sys:user:add", pers);
+                            return edit;
+                        }
+                    },
+
+                ],
+                "order": [[0, "desc"], [1, "asc"]]
+            });
+    }
+    init();
 
 </script>
 </body>

@@ -1,3 +1,4 @@
+
 /* 布局 */
 .site-inline{font-size: 0;}
 .site-tree, .site-content{display: inline-block;  *display:inline; *zoom:1; vertical-align: top; font-size: 14px;}
@@ -166,7 +167,7 @@ body .layui-layer-dir .layui-layer-content{padding: 10px; max-height: 280px; ove
 
 /* 演示 */
 body .layui-layout-admin .site-demo{bottom: 82px; padding: 0;z-index:-1;}
-body .site-demo-nav .layui-nav-item{line-height: 40px}
+body .site-demo-nav .layui-nav-item{line-height: 45px}
 .layui-nav-item .layui-icon{position: relative; /*font-size: 20px;*/}
 .layui-nav-item a cite{padding: 0 10px;}
 .site-demo .layui-main{margin: 15px; line-height: 22px;}
@@ -422,4 +423,5 @@ body .site-demo-nav .layui-nav-item{line-height: 40px}
   
   .admin-side-toggle ,.admin-header-item{display: none;}
   .admin-header-item-mobile{ display: block; }
+
 }

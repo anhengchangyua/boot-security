@@ -787,7 +787,6 @@ a cite {
 }
 
 .layui-main {
-
     width: 1140px;
     margin: 0 auto
 }
@@ -1526,7 +1525,6 @@ a cite {
 .layui-elem-field {
     margin-bottom: 10px;
     padding: 0;
-    padding-left: 100px;
     border-width: 1px;
     border-style: solid
 }
@@ -3404,7 +3402,7 @@ body .layui-table-tips .layui-layer-content {
     top: 65px;
     min-width: 100%;
     line-height: 36px;
-    margin-left: 10px;
+    padding: 5px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
     border: 1px solid #d2d2d2;
     background-color: #fff;
@@ -3498,16 +3496,11 @@ body .layui-table-tips .layui-layer-content {
     color: #fff
 }
 
-/*修改处*/
 .layui-nav-tree .layui-nav-more {
-    top: 20px;
-    right: 10px;
-    margin: 0
+    right: 10px
 }
 
-
-
-.layui-nav-itemed .layui-nav-child {
+.layui-nav-itemed > .layui-nav-child {
     display: block;
     padding: 0;
     background-color: rgba(0, 0, 0, .3) !important
