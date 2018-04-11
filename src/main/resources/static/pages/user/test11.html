@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <!--如果使用辅助线需要去除bootstrap-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../layui/css/layui.css">
+
+</head>
+<style>
+    .test1 {
+        margin-left: 20px;
+        float: left;
+        display: block;
+        padding: 9px 15px;
+        width: 80px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .test2 {
+        margin-top: 10px;
+    }
+</style>
+<body>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 审核机构选择 -</legend>
+</fieldset>
+
+<form id="form1" class="layui-form" action="">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">审核所在地</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <label class="layui-form-label test1">审核机构</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 基本信息 -</legend>
+</fieldset>
+
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">供应商中文名称</label>
+            <div class="layui-input-inline test2">
+                <input type="tel" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">供应商英文名称</label>
+            <div class="layui-input-inline test2">
+                <input type="text" value="事实上" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">组织机构代码(三证合一)</label>
+            <div class="layui-input-inline test2">
+                <input type="tel" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">成立日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date1" lay-verify="date" placeholder="" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">企业简称(中文)</label>
+            <div class="layui-input-inline test2">
+                <input type="text" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">企业简称(英文)</label>
+            <div class="layui-input-inline test2">
+                <input type="text" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">生产厂商标识</label>
+            <div class="layui-input-inline test2    ">
+                <input type="radio" name="" value="否" title="否" checked="">
+                <input type="radio" name="" value="是" title="是">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">国别</label>
+            <div class="layui-input-inline">
+                <select name="country" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 人员信息 -</legend>
+</fieldset>
+
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col width="150">
+        <col width="200">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>人物</th>
+        <th>民族</th>
+        <th>出场时间</th>
+        <th>格言</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>贤心</td>
+        <td>汉族</td>
+        <td>1989-10-14</td>
+        <td>人生似修行</td>
+    </tr>
+    <tr>
+        <td>张爱玲</td>
+        <td>汉族</td>
+        <td>1920-09-30</td>
+        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+    </tr>
+    <tr>
+        <td>Helen Keller</td>
+        <td>拉丁美裔</td>
+        <td>1880-06-27</td>
+        <td> Life is either a daring adventure or nothing.</td>
+    </tr>
+    <tr>
+        <td>岳飞</td>
+        <td>汉族</td>
+        <td>1103-北宋崇宁二年</td>
+        <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+    </tr>
+    <tr>
+        <td>孟子</td>
+        <td>华夏族（汉族）</td>
+        <td>公元前-372年</td>
+        <td>猿强，则国强。国强，则猿更强！</td>
+    </tr>
+    </tbody>
+</table>
+
+<table class="layui-hide" id="tabletest"></table>
+<button class="layui-btn" lay-submit lay-filter="demo1">立即提交</button>
+</body>
+</html>
+
+
+<script type="text/javascript" src="../../js/libs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jq.js"></script>
+<script type="text/javascript" src="../../js/plugin/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/my/permission.js"></script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+
+
+<script type="text/javascript">
+    layui.use(['layer', 'form', 'element', "laydate", "table"], function () {
+
+
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate
+            , table = layui.table
+            , $ = layui.jquery;
+
+        var parentDiv = '<div class="layui-form-item"></div>';
+        var lable = '<label class="layui-form-label">验证必填项</label>';
+        var div = '<div class="layui-input-block"></div>';
+        var intput = '<input type="text" value="测试" lay-verify="required" placeholder="请输入">';
+        $(parentDiv).append(lable);
+        $(parentDiv).append(div);
+        $(div).append(intput);
+        $("form1").append(parentDiv);
+
+        form.render();//添加后再渲染 更新全部
+
+        table.render({
+            elem: '#tabletest'
+            , url: '/users'
+            , method: 'get'
+            , cols: [[
+                {field: 'username', width: 80, title: '用户名'}
+            ]]
+        });
+
+        //日期
+        laydate.render({
+            elem: '#date1'
+        });
+
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            }
+        });
+        //提交验证
+        form.on('submit(demo1)', function (data) {
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+    });
+    var pers = checkPermission();
+
+</script>

@@ -34,6 +34,9 @@ public interface UserDao {
 	List<SysUser> list(@Param("params") Map<String, Object> params, @Param("offset") Integer offset,
 			@Param("limit") Integer limit);
 
+	@Select("select username from sys_user")
+	List<SysUser> findtest();
+
 	@Delete("delete from sys_role_user where userId = #{userId}")
 	int deleteUserRole(Long userId);
 
