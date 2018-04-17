@@ -13,25 +13,25 @@ import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 @Configuration
 public class JobConfig {
 
-	public static final String KEY = "applicationContextSchedulerContextKey";
+    public static final String KEY = "applicationContextSchedulerContextKey";
 
-	@Bean("adminQuartzScheduler")
-	public SchedulerFactoryBean quartzScheduler(DataSource dataSource) {
-		SchedulerFactoryBean quartzScheduler = new SchedulerFactoryBean();
+    @Bean("adminQuartzScheduler")
+    public SchedulerFactoryBean quartzScheduler(DataSource dataSource) {
+        SchedulerFactoryBean quartzScheduler = new SchedulerFactoryBean();
 
-		try {
-			quartzScheduler.setQuartzProperties(
-					PropertiesLoaderUtils.loadProperties(new ClassPathResource("quartz.properties")));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		quartzScheduler.setDataSource(dataSource);
-		quartzScheduler.setOverwriteExistingJobs(true);
-		quartzScheduler.setApplicationContextSchedulerContextKey(KEY);
-		quartzScheduler.setStartupDelay(10);
+        try {
+            quartzScheduler.setQuartzProperties(
+                    PropertiesLoaderUtils.loadProperties(new ClassPathResource("quartz.properties")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        quartzScheduler.setDataSource(dataSource);
+        quartzScheduler.setOverwriteExistingJobs(true);
+        quartzScheduler.setApplicationContextSchedulerContextKey(KEY);
+        quartzScheduler.setStartupDelay(10);
 
-		return quartzScheduler;
-	}
+        return quartzScheduler;
+    }
 
 //	@Autowired
 //	private JobService jobService;

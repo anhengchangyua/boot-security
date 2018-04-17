@@ -31,10 +31,10 @@ public interface UserDao {
 
 	Integer count(@Param("params") Map<String, Object> params);
 
-	List<SysUser> list(@Param("params") Map<String, Object> params, @Param("offset") Integer offset,
+	List<SysUser> list(@Param("params") Map<String, Object> params, @Param("page") Integer offset,
 			@Param("limit") Integer limit);
 
-	@Select("select username from sys_user")
+	@Select("select * from sys_user")
 	List<SysUser> findtest();
 
 	@Delete("delete from sys_role_user where userId = #{userId}")

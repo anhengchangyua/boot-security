@@ -17,7 +17,6 @@
 			<if test="params.val != null and params.val != ''">
 				and val = #{params.val}
 			</if>
-
 		</where>
 	</sql>
 

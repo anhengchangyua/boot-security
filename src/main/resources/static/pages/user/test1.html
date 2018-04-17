@@ -3,22 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <title>测试</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+    <!--如果使用辅助线需要去除bootstrap-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" media="screen" href="../../css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../layui/css/layui.css">
-</head>
 
+</head>
 <style>
     .test1 {
-        width: 100px;
+        margin-left: 20px;
+        float: left;
+        display: block;
+        padding: 9px 15px;
+        width: 80px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
     }
 
+    .test2 {
+        margin-top: 10px;
+    }
 </style>
-
 <body>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 审核机构选择 -</legend>
+</fieldset>
+
 <form id="form1" class="layui-form" action="">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">审核所在地</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <label class="layui-form-label test1">审核机构</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 基本信息 -</legend>
+</fieldset>
+
+<form class="layui-form" action="">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">供应商中文名称</label>
+            <div class="layui-input-inline test2">
+                <input type="tel" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">供应商英文名称</label>
+            <div class="layui-input-inline test2">
+                <input type="text" value="" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">组织机构代码(三证合一)</label>
+            <div class="layui-input-inline test2">
+                <input type="tel" lay-verify="required" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">成立日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date1" lay-verify="date" placeholder="" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">企业简称(中文)</label>
+            <div class="layui-input-inline test2">
+                <input type="text" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">企业简称(英文)</label>
+            <div class="layui-input-inline test2">
+                <input type="text" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label test1">生产厂商标识</label>
+            <div class="layui-input-inline test2">
+                <input type="radio" name="" value="否" title="否" >
+                <input type="radio" name="" value="是" title="是" checked>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label test1">国别</label>
+            <div class="layui-input-inline">
+                <select name="country" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
 </form>
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px">
+    <legend>- 人员信息 -</legend>
+</fieldset>
+
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col width="150">
+        <col width="200">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>人物</th>
+        <th>民族</th>
+        <th>出场时间</th>
+        <th>格言</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>贤心</td>
+        <td>汉族</td>
+        <td>1989-10-14</td>
+        <td>人生似修行</td>
+    </tr>
+    <tr>
+        <td>张爱玲</td>
+        <td>汉族</td>
+        <td>1920-09-30</td>
+        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+    </tr>
+    <tr>
+        <td>Helen Keller</td>
+        <td>拉丁美裔</td>
+        <td>1880-06-27</td>
+        <td> Life is either a daring adventure or nothing.</td>
+    </tr>
+    <tr>
+        <td>岳飞</td>
+        <td>汉族</td>
+        <td>1103-北宋崇宁二年</td>
+        <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+    </tr>
+    <tr>
+        <td>孟子</td>
+        <td>华夏族（汉族）</td>
+        <td>公元前-372年</td>
+        <td>猿强，则国强。国强，则猿更强！</td>
+    </tr>
+    </tbody>
+</table>
+
+<button class="layui-btn" lay-submit lay-filter="demo1">立即提交</button>
 </body>
 </html>
 
@@ -28,24 +204,32 @@
 <script type="text/javascript" src="../../js/plugin/datatables/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../../js/plugin/datatables/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" src="../../layui/layui.js"></script>
-<script type="text/javascript" src="../../js/my/permission.js"></script>
+
+
 <script type="text/javascript">
-    layui.use(['layer', 'form', 'element'], function () {
-        var layer = layui.layer
-            , form = layui.form;
+    layui.use(['layer', 'form', 'element', "laydate", "table"], function () {
 
-        var parentDiv = $('<div class="layui-form-item"></div>');
-        var lable = $('<label class="layui-form-label">验证必填项</label>');
-        var div = $('<div class="layui-input-block"></div>');
-        var intput = $('  <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" >');
-        lable.addClass('test1');
-        intput.addClass('layui-input');
-        $(parentDiv).append(lable);
-        $(parentDiv).append(div);
-        $(div).append(intput);
-        $("#form1").append(parentDiv);
 
-        form.render();//添加后再渲染 更新全部
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate
+            , table = layui.table;
+
+
+        table.render({
+            elem: '#tabletest'
+            , url: '/users'
+            , method: 'get'
+            , cols: [[
+                {field: 'username', width: 80, title: '用户名'}
+            ]]
+        });
+
+        //日期
+        laydate.render({
+            elem: '#date1'
+        });
 
         //自定义验证规则
         form.verify({
@@ -64,76 +248,5 @@
         });
 
     });
-    // var example;
-    // var pers = checkPermission();
-    //
-    // function init() {
-    //     example =
-    //         $('#dt-table').DataTable({
-    //             "searching": false,
-    //             "processing": false,
-    //             "serverSide": true,
-    //             "language": {
-    //                 "url": "/js/plugin/datatables/Chinese.lang"
-    //             },
-    //             "ajax": {
-    //                 "url": "/users",
-    //                 "type": "get",
-    //                 "data": function (d) {
-    //                     d.username = $('#username').val();
-    //                     d.nickname = $('#nickname').val();
-    //                     d.status = $('#status').val();
-    //                 },
-    //                 "error": function (xhr, textStatus, errorThrown) {
-    //                     var msg = xhr.responseText;
-    //                     console.log(msg);
-    //                     var response = JSON.parse(msg);
-    //                     var code = response.code;
-    //                     var message = response.message;
-    //                     if (code == 400) {
-    //                         layer.msg(message);
-    //                     } else if (code == 401) {
-    //                         localStorage.removeItem("token");
-    //                         layer.msg("token过期，请先登录", {shift: -1, time: 1000}, function () {
-    //                             location.href = '/login.html';
-    //                         });
-    //                     } else if (code == 403) {
-    //                         console.log("未授权:" + message);
-    //                         layer.msg('未授权');
-    //                     } else if (code == 500) {
-    //                         layer.msg('系统错误：' + message);
-    //                     }
-    //                 }
-    //             },
-    //             "dom": "<'dt-toolbar'r>t<'dt-toolbar-footer'<'col-sm-10 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-10' p v>>",
-    //             "columns": [
-    //                 {"data": "username", "defaultContent": ""},
-    //                 {"data": "nickname", "defaultContent": ""},
-    //                 {"data": "phone", "defaultContent": ""},
-    //                 {"data": "email", "defaultContent": ""},
-    //                 {
-    //                     "data": "status",
-    //                     "defaultContent": "",
-    //                     "render": function (data, type, row) {
-    //                         return userStatus[data];
-    //                     }
-    //                 },
-    //                 {
-    //                     "data": "",
-    //                     "defaultContent": "",
-    //                     "orderable": false,
-    //                     "render": function (data, type, row) {
-    //                         var id = row['id'];
-    //                         var href = "updateUser.html?id=" + id;
-    //                         var edit = buttonEdit(href, "sys:user:add", pers);
-    //                         return edit;
-    //                     }
-    //                 },
-    //
-    //             ],
-    //             "order": [[0, "desc"], [1, "asc"]]
-    //         });
-    // }
-    // init();
 
 </script>

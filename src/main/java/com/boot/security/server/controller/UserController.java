@@ -1,5 +1,6 @@
 package com.boot.security.server.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.github.pagehelper.PageHelper;
@@ -87,37 +88,47 @@ public class UserController {
         userService.changePassword(username, oldPassword, newPassword);
     }
 
-//    @GetMapping
-//    @ApiOperation(value = "用户列表")
-//    @PreAuthorize("hasAuthority('sys:user:query')")
-//    public PageTableResponse listUsers(PageTableRequest request) {
-//        return new PageTableHandler(new CountHandler() {
-//
-//            @Override
-//            public int count(PageTableRequest request) {
-//                return userDao.count(request.getParams());
-//            }
-//        }, new ListHandler() {
-//
-//            @Override
-//            public List<SysUser> list(PageTableRequest request) {
-//                List<SysUser> list = userDao.list(request.getParams(), request.getOffset(), request.getLimit());
-//                return list;
-//            }
-//        }).handle(request);
-//    }
-
-
     @GetMapping
     @ApiOperation(value = "用户列表")
     @PreAuthorize("hasAuthority('sys:user:query')")
-    public List<SysUser> listUsers(@RequestParam(value = "page", defaultValue = "0") int start, @RequestParam(value = "limit", defaultValue = "5") int size) throws Exception {
-        PageHelper.startPage(start, size, "id desc");
-        List<SysUser> cs = userDao.findtest();
-        PageInfo<SysUser> page = new PageInfo<>(cs);
-        List<SysUser> list = page.getList();
-        return list;
+    public PageTableResponse listUsers(PageTableRequest request) {
+        PageTableResponse response = new PageTableHandler(new CountHandler() {
+
+            @Override
+            public int count(PageTableRequest request) {
+                return userDao.count(request.getParams());
+            }
+        }, new ListHandler() {
+
+            @Override
+            public List<SysUser> list(PageTableRequest request) {
+                List<SysUser> list = userDao.list(request.getParams(), request.getOffset(), request.getLimit());
+                return list;
+            }
+        }).handle(request);
+
+        return response;
     }
+
+//
+//    @GetMapping
+//    @ApiOperation(value = "用户列表")
+//    @PreAuthorize("hasAuthority('sys:user:query')")
+//    public  HashMap<Object, Object> listUsers(@RequestParam(value = "page", defaultValue = "0") int start, @RequestParam(value = "limit", defaultValue = "1") int size) throws Exception {
+//        PageHelper.startPage(start, size, "id desc");
+//        List<SysUser> cs = userDao.findtest();
+//        PageInfo<SysUser> page = new PageInfo<>(cs);
+//
+//        List<SysUser> list = page.getList();
+//        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+//        objectObjectHashMap.put("code", 0);
+//        objectObjectHashMap.put("msg", "");
+//        objectObjectHashMap.put("count", page.getPageSize());
+//        objectObjectHashMap.put("data", list);
+//
+//
+//        return objectObjectHashMap;
+//    }
 
 
     @ApiOperation(value = "当前登录用户")
