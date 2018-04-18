@@ -110,26 +110,6 @@ public class UserController {
         return response;
     }
 
-//
-//    @GetMapping
-//    @ApiOperation(value = "用户列表")
-//    @PreAuthorize("hasAuthority('sys:user:query')")
-//    public  HashMap<Object, Object> listUsers(@RequestParam(value = "page", defaultValue = "0") int start, @RequestParam(value = "limit", defaultValue = "1") int size) throws Exception {
-//        PageHelper.startPage(start, size, "id desc");
-//        List<SysUser> cs = userDao.findtest();
-//        PageInfo<SysUser> page = new PageInfo<>(cs);
-//
-//        List<SysUser> list = page.getList();
-//        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-//        objectObjectHashMap.put("code", 0);
-//        objectObjectHashMap.put("msg", "");
-//        objectObjectHashMap.put("count", page.getPageSize());
-//        objectObjectHashMap.put("data", list);
-//
-//
-//        return objectObjectHashMap;
-//    }
-
 
     @ApiOperation(value = "当前登录用户")
     @GetMapping("/current")
