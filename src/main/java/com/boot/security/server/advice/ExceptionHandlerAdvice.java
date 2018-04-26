@@ -20,6 +20,7 @@ import com.boot.security.server.dto.ResponseInfo;
  * @author 小威老师
  *
  */
+
 @RestControllerAdvice
 public class ExceptionHandlerAdvice {
 
