@@ -7,6 +7,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.DocumentationPlugin;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -21,6 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
+//	DocumentationPlugin
 	@Bean
 	public Docket docket() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("swagger接口文档")

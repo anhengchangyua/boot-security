@@ -26,7 +26,9 @@ public class JobConfig {
             e.printStackTrace();
         }
         quartzScheduler.setDataSource(dataSource);
+        //覆盖存在的job
         quartzScheduler.setOverwriteExistingJobs(true);
+        //？？？
         quartzScheduler.setApplicationContextSchedulerContextKey(KEY);
         quartzScheduler.setStartupDelay(10);
 
